@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Firewall Rule Modification Status</title>
+    <link rel="stylesheet" href="/static/styles/site.css">
+    <link rel="stylesheet" href="/static/styles/progress-tracker.css">
+</head>
+
+<body>
+<div class="container">
+    <div class="demo">
+        <h2>Firewall Rule Modification Process Status</h2>
+
+
+        <ul class="progress-tracker progress-tracker--text">
+            {{ range . }}
+            <li class="progress-step {{.Status}}">
+                <span class="progress-marker"></span>
+
+                <span class="progress-text">
+                 <h4 class="progress-title"></h4>
+                {{ .Step }}
+                </span>
+
+            </li>
+            {{ end }}
+        </ul>
+
+    </div>
+</div>
+
+</body>
+</html>
